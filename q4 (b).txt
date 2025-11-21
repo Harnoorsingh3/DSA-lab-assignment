@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int a,b,c,d,e;
+    a=2;
+    b=3;
+    c=1;
+    
+    
+    d=3;
+    e=2;
+    
+    int arr[a][b];
+    int arr2[d][e];
+    int arr3[a][e];
+    
+    for(int i=0;i<a;i++){
+        for(int j=0;j<b;j++){
+            arr[i][j]=c;
+            c++;
+        }
+    }
+    
+    for(int i=0;i<d;i++){
+        for(int j=0;j<e;j++){
+            arr2[i][j]=c;
+            c++;
+        }
+    }
+  
+  
+    
+    
+    for(int i=0;i<a;i++){
+        for(int j=0;j<e;j++){
+          arr3[i][j]=0;
+           
+        }
+        cout<<endl;
+    }
+    
+    for(int i=0;i<a;i++){
+        for(int j=0;j<e;j++){
+            
+            for(int y=0;y<=2;y++){
+                arr3[i][j]+=arr[i][y]*arr2[y][j];
+            }
+        }
+    }
+
+  for(int i=0;i<a;i++){
+        for(int j=0;j<e;j++){
+           cout<< arr3[i][j]<<" ";
+           
+        }
+        cout<<endl;
+    }}
